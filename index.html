@@ -15,7 +15,22 @@
     margin: 0;
     padding: 0;
 }
-
+/* to make header top of screen */
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    z-index: -1;
+}
+header>h1{
+  font-family: 'Sacramento', cursive;
+  font-size: 3.2em;
+  font-weight: 400;
+  color: #fff;
+}
 body {
     font-family: 'Open Sans', sans-serif;
     display: flex;
@@ -23,25 +38,60 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: #302f2f;
-    /* set width to 300px of background image and no repeat */
-    position: relative;
-    background-image: url(./images/pexels-johannes-plenio-1119974.jpg);
-
-    /* background-image: url(./images/pexels-johannes-plenio-1119974.jpg); */
-    background-size:1300px 630px;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: skyblue;
     }
+
+
 .card{
     background-color: #000000b0 !important;
     color: #fff !important;
+    box-shadow
+: 
+0
+ 
+2px
+ 
+4px
+ 
+rgba
+(
+0
+, 
+0
+, 
+0
+, 
+0.1
+);
+
     padding: 2em;
     border: 1px solid white;
     border-radius: 28px;
     width: 100%;
     max-width: 420px;
     margin: 1em;
+}
+h1
+ {
+  
+margin-bottom
+: 
+10px
+;
+  
+color
+: 
+#333
+;
+}
+
+form
+ {
+  
+margin-bottom
+: 
+20px
+;
 }
 .search {
     display: flex;
@@ -82,6 +132,7 @@ input.citySearched{
 </style>
 </head>
 <body>
+  <header><h1>Weather App</h1></header> 
   <div class="card">
   <form action="/" method="post">
    
@@ -104,16 +155,15 @@ input.citySearched{
     <div class="gap" style="padding: 0.6em;">
       <i class="fa-regular fa-clouds"></i>
     </div>
-      <div class="description">
-        Cloudy
+      <div class="description cloud">
+        Cloudy/Sunny/Hazzy
       </div>
       <div class="humidity">
-        Humidity: 50%
+        Humidity:
       </div>
       <div class="windspeed">
         Wind Speed: 10km/h
       </div>
-
     </div>
     </form>
   </div>
