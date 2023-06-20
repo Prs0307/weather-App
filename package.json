@@ -2,8 +2,10 @@
   "name": "weather-app",
   "version": "1.0.0",
   "description": "A simple weather  Api use app",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "node": "node app.js",
+    "dev" :"nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
