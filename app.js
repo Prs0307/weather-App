@@ -72,8 +72,7 @@ app.post('/', (req, res) => {
     
     body {
 
-      font-family: 'Headland One', serif;
-
+         font-family: 'Headland One', serif;
         display: flex;
         justify-content: center;
         align-items: center;
