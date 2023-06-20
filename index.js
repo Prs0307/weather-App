@@ -25,6 +25,7 @@ app.post('/', (req, res) => {
       const weatherDescription = weatherData.weather[0].description;
       const Humidity = weatherData.main.humidity;
       const windSpeed = weatherData.wind.speed;
+      const countryName=weatherData.sys.country;
 //       var weatherImg= weatherData.weather[0].description;
 
 //       const bodyElement = document.getElementById("body");
@@ -60,7 +61,9 @@ app.post('/', (req, res) => {
       (
       `  
       <head><meta charset="utf-8"><title>Weather App</title>
-      <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,600;1,700&family=Sacramento&display=swap" rel="stylesheet">');
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Headland+One&family=Josefin+Slab:ital,wght@1,600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,600;1,700&family=Sacramento&display=swap" rel="stylesheet">
       <style> 
       *{
         margin: 0;
@@ -69,7 +72,8 @@ app.post('/', (req, res) => {
     
     body {
 
-        font-family: 'Open Sans', sans-serif;
+      font-family: 'Headland One', serif;
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -91,9 +95,9 @@ header{
     z-index: -1;
 }
 header>h1{
-  font-family: 'Sacramento', cursive;
+  font-family: 'Oswald', 'Sacramento', 'cursive';
   font-size: 3.2em;
-  font-weight: 400;
+  font-weight: 800;
   color: rgb(243, 217, 217);
 }
     .card{
@@ -172,6 +176,14 @@ header>h1{
         cursor: pointer;
         transition: 0.22s ease-in-out;
     }
+    #country{
+      font-size: 1.2em;
+      font-weight: 700;
+      color: #fff;
+      // position: absolute;
+      padding: 0 0 0 0.5em;
+    }
+
     button:hover{
        
         background: #595757;
@@ -229,20 +241,22 @@ header>h1{
       res.write('</div>');
       res.write(' <div class="weather-at">');
       res.write(
-          '<h2 class="city"> Weather in ' +
+          '<h2 h2 class="city"> Weather in ' +
           CitySearched +
-          ' is </h2><div><h1 >' +
+          '<span id=country>'+countryName +'</span>'+
+          '</h2><div><h1 >' +
           temp +
           ' &deg;C </h1>'
           );
           res.write('</div>');
           res.write('<div class="gap">  ');
-          res.write('<i class="fa-regular fa-clouds"></i>');
+          // res.write('<i class="fa-regular fa-clouds"></i>');
           res.write(
               '<div class="weather-description description"><h4>The weather is currently ' + weatherDescription + '</h4></div>'
               );
               res.write('<div class="humidity"><h4>Humidity: ' + Humidity + '%</h4></div>');
       res.write('<div class="windSpeed"><h4>Wind Speed: ' + windSpeed + 'Km/Hour</h4></div>');
+
            res.write('</form>');
       res.write('</div></body>');
           
