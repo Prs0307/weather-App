@@ -94,7 +94,7 @@ header{
     z-index: -1;
 }
 header>h1{
-  font-family: 'Oswald', 'Sacramento', 'cursive';
+ font-family: 'Headland One', 'Sacramento', 'cursive';
   font-size: 3.2em;
   font-weight: 800;
   color: rgb(243, 217, 217);
