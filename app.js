@@ -76,10 +76,12 @@ app.post("/", (req, res) => {
         align-items: center;
         height: 100vh;
        margin 0;
-   
-        background: linear-gradient(135deg, #87CEEB 0%, #1E90FF 100%);
-        /* set width to 300px of background image and no repeat */
-       
+    background-image: url("../images/pexels-priscilla-serneo-1588846.jpg") ; 
+
+      //  background-image: url("../images/pexels-eberhard-grossgasteiger-691574.jpg") ; 
+       /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOB91u3pHkrhkfwtVHNV0pc0F7enPRJVUcVkRvvcMQ&s" ); */
+       background-repeat: no-repeat;
+       background-size:cover;
         }
         /* to make header top of screen */
 header{
@@ -92,54 +94,41 @@ header{
     z-index: -1;
 }
 header>h1{
- font-family: 'Headland One', 'Sacramento', 'cursive';
+  font-family: 'Headland One', serif;
   font-size: 3.2em;
-  font-weight: 800;
-  color: rgb(243, 217, 217);
+  font-weight: 400;
+  color: #fff;
 }
     .card{
-      margin-top: 2em;
-       
-        background-color: #000000b0 !important;
-        color: #fff !important;
-        box-shadow
-    : 
-    0
-     
-    2px
-     
-    4px
-     
-    rgba
-    (
-    0
-    , 
-    0
-    , 
-    0
-    , 
-    0.1
-    );
-    
-        padding: 2em;
-        border: 1px solid white;
-        border-radius: 28px;
-        width: 100%;
-        max-width: 420px;
-        margin: 1em;
-    }
-    h1
-     {
-      
-    margin-bottom
-    : 
-    10px
-    ;
-      
-    color
-    : 
-    #ffffff
-    ;
+      background-image: url("../images/pexels-amy-chandra-789152.jpg");
+      background-size:100%;
+      opacity: 0.8;
+      color: #000000 !important;
+      box-shadow
+  : 
+  0
+   
+  2px
+   
+  4px
+   
+  rgba
+  (
+  0
+  , 
+  0
+  , 
+  0
+  , 
+  0.1
+  );
+  
+      padding: 2em;
+      border: 1px solid white;
+      border-radius: 28px;
+      width: 100%;
+      max-width: 420px;
+      margin: 1em;
     }
     
     form
